@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.send('GET!');
 });
 
+router.post('/create', function(req, res, next) {
+  res.sendStatus(200);
+});
+
 module.exports = router;
