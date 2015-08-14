@@ -58,8 +58,4 @@ app.use(function(err, req, res, next) {
   });
 });
 
-
-app.listen(3000);
-console.log('Express server started on port 3000');
-
 module.exports = app;

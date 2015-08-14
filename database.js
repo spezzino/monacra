@@ -2,21 +2,21 @@ var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
 var Report = new Schema({
-    user_comment : String,
-    stack_trace : String,
-    phone_model : String,
-    device_id : String,
-    product : String,
-    installation_id : String,
-    logcat : String,
-    app_version_name : String,
-    user_app_start_date : String,
-    shared_preferences : String,
-    brand : String,
-    android_version : String,
-    package_name : String,
-    app_version_code : String,
-    report_id : String,
+    USER_COMMENT : String,
+    STACK_TRACE : String,
+    PHONE_MODEL : String,
+    DEVICE_ID : String,
+    PRODUCT : String,
+    INSTALLATION_ID : String,
+    LOGCAT : String,
+    APP_VERSION_NAME : String,
+    USER_APP_START_DATE : String,
+    SHARED_PREFERENCES : String,
+    BRAND : String,
+    ANDROID_VERSION : String,
+    PACKAGE_NAME : String,
+    APP_VERSION_CODE : String,
+    REPORT_ID : String,
 });
 
 mongoose.model('reports', Report);
