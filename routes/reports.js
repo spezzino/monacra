@@ -18,7 +18,8 @@ router.get('/', function(req, res, next){
 		APP_VERSION_NAME: true,
 		PHONE_MODEL: true, 
 		INSERTED: true,
-		REPORT_ID: true
+		REPORT_ID: true,
+		SOLVED: true
 	})
 	.exec(function(err, reports){
 		if(err) return next(err);

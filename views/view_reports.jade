@@ -1,9 +1,15 @@
 extends layout
 
 block content
+	ol.breadcrumb
+		li
+			a(href="/") Home
+		li.active Reports
+
 	table.table.table-striped.table-hover
 		tr
 			th #
+			th STATE
 			th APP_VERSION_NAME
 			th DEVICE_ID
 			th PHONE_MODEL
@@ -14,6 +20,11 @@ block content
 					- var id = report.REPORT_ID;
 					- var shortId = id.substring(id.length-10,id.length);
 					a(href="/reports/view/#{report._id}") #{shortId}
+				td 
+					if report.SOLVED == false
+						span.label.label-danger UNSOLVED
+					else
+						span.label.label-success SOLVED
 				td #{report.APP_VERSION_NAME}
 				td #{report.DEVICE_ID}
 				td #{report.PHONE_MODEL}

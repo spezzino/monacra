@@ -1,7 +1,22 @@
 extends layout
 
 block content
-	h1 Report ##{report.REPORT_ID}
+	ol.breadcrumb
+		li
+			a(href="/") Home
+		li
+			a(href="/reports") Reports
+		li.active
+			#{report.REPORT_ID}
+
+	h2 
+		if report.SOLVED == false
+			span.label.label-danger UNSOLVED
+		else
+			span.label.label-success SOLVED
+
+		| Report ##{report.REPORT_ID}
+
 	table.table.table-striped.table-hover
 		tr
 			th KEY
