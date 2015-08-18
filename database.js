@@ -17,6 +17,8 @@ var Report = new Schema({
     PACKAGE_NAME : String,
     APP_VERSION_CODE : String,
     REPORT_ID : String,
+    INSERTED: Date,
+    SOLVED: Boolean
 });
 
 mongoose.model('reports', Report);

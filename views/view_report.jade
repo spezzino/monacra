@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1 Report ##{report.REPORT_ID}
+	table.table.table-striped.table-hover
+		tr
+			th KEY
+			th VALUE
+		each val, key in report
+			tr
+				td #{key}
+				td 
+					pre #{val}

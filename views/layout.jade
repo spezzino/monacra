@@ -3,7 +3,10 @@ html
 	head
 		block head
 			block title
-				title Program Name
+				if title
+					title #{title}
+				else
+					title MonACRA
 			block meta
 				meta(name='description', content='')
 				meta(name='keywords', content='')
@@ -15,6 +18,7 @@ html
 	body
 		include header
 
-		block content
+		div.container
+			block content
 
 		include footer

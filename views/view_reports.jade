@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	table.table.table-striped.table-hover
+		tr
+			th #
+			th APP_VERSION_NAME
+			th DEVICE_ID
+			th PHONE_MODEL
+			th INSERTED
+		each report, i in reports
+			tr
+				td 
+					- var id = report.REPORT_ID;
+					- var shortId = id.substring(id.length-10,id.length);
+					a(href="/reports/view/#{report._id}") #{shortId}
+				td #{report.APP_VERSION_NAME}
+				td #{report.DEVICE_ID}
+				td #{report.PHONE_MODEL}
+				td #{report.INSERTED}
